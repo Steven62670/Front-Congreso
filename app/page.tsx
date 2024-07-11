@@ -122,6 +122,80 @@ function Home() {
           </div>
 
         </form>
+
+        <div className="containerRadio" style={{ border: '1px solid black', padding: '10px' }}>
+          <form className="formContainer">
+
+            <div className="Check">
+              <input type="radio" id="option1" name="option" value="option1"/>
+              <label htmlFor="NivelEstudio">$400.0 Ponente profesional </label>
+            </div>
+
+            <div className="Check">
+              <input type="radio" id="option1" name="option" value="option1"/>
+              <label htmlFor="NivelEstudio">$ 320.0 PONENTE DOCENTE UNIVERSITARIO </label>
+            </div>
+
+            <div className="Check">
+              <input type="radio" id="option1" name="option" value="option1"/>
+              <label htmlFor="NivelEstudio">$ 200.0 PONENTE ESTUDIANTE EXTERNO </label>
+            </div>
+
+            <div className="Check">
+              <input type="radio" id="option1" name="option" value="option1"/>
+              <label htmlFor="NivelEstudio">$ 0.0 PONENTE DOCENTE O ESTUDIANTE UPS </label>
+            </div>
+
+            <div className="Check">
+              <input type="radio" id="option1" name="option" value="option1"/>
+              <label htmlFor="NivelEstudio">$ 15.0 ASISTENTE CON CERTIFICADO (NO PONENTE) </label>
+            </div>
+
+            <div className="Check">
+              <input type="radio" id="option1" name="option" value="option1"/>
+              <label htmlFor="NivelEstudio">$ 0.0 ASISTENTE SIN CERTIFICADO (NO PONENTE) </label>
+            </div>
+
+            <div className="Check">
+              <input type="radio" id="option1" name="option" value="option1"/>
+              <label htmlFor="NivelEstudio">$ 150.0 PONENTE PROFESIONAL </label>
+            </div>
+
+          </form>
+
+        </div>
+
+        <div className="textContainer" style={{ border: '1px solid black', padding: '10px' }}>
+          <h3>* Protección de datos personales :</h3>
+            <label htmlFor="texto">De conformidad con lo dispuesto en la Ley Orgánica de Protección de Datos 
+              y su Reglamento General de Protección de datos, le informamos que sus datos personales serán tratados 
+              por la Universidad Politécnica Salesiana, domiciliada en la calle Turuhuayco 3-69 y Calle Vieja, 
+              en calidad de Responsable de Tratamiento con la finalidad de registrar su inscripción al Congreso 
+              Internacional de Ciencia, Tecnología e Innovación para la Sociedad CITIS 2024 que se desarrollará en 
+              el Campus María Auxiliadora, Km 19 vía a la costa - Guayaquil ,del 17-07-2024 Hasta 19-07-2024.<br/>
+              <br/>La base jurídica que habilita a la Universidad para 
+              el tratamiento de este tipo de datos de carácter es el consentimiento expreso 
+              del asistente para el tratamiento de sus datos siendo este consentimiento obligatorio 
+              para poder ser inscrito al programa:<br/>
+              <br/>Sus datos personales no serán cedidos por la Universidad a terceros salvo por obligación legal. 
+              Adicionalmente, le indicamos que sus datos personales se conservarán únicamente hasta que finalice el programa:
+              Congreso Internacional de Ciencia, Tecnología e Innovación para la Sociedad CITIS 2024 y posteriormente se conservarán 
+              bloqueados durante los plazos establecidos legalmente para atender a las posibles responsabilidades originadas del 
+              tratamiento de los mismos.<br/>
+              <br/>Podrá ejercitar sus derechos de acceso, rectificación, supresión, portabilidad de los datos y limitación u oposición a su 
+              tratamiento a través de la dirección electrónica: usodedatos@ups.edu.ec.<br/>
+            </label>
+
+          <div className="Check">
+            <input type="checkbox" id="check" name="check" />
+          </div>
+
+        </div>
+
+        <div className="Check">
+          <button className="Button">Visualizar datos</button>
+          <button className="Button2">Limpiar</button>
+        </div>
       
       </div>
 
@@ -131,3 +205,4 @@ function Home() {
 }
 
 export default Home 
+

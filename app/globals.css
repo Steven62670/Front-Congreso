@@ -22,7 +22,7 @@
   padding: 5px;
   margin-bottom: 10px;
   text-align: center;
-  width: 40%;
+  width: 50%;
 }
 
 .containerCon{
@@ -61,6 +61,7 @@
   color: black;
   font-size: 0.9em;
   text-align: center; /* Cambiado a izquierda para alineación adecuada */
+  margin-bottom: 15px;
 }
 
 .formGroup {
@@ -79,7 +80,7 @@
 }
 
 .formGroup input, .formGroup select {
-  width: 40%;
+  width: 30%;
   padding: 5px;
   margin-left: 15px;
 }
@@ -88,5 +89,28 @@
   margin-bottom: 15px;
   text-align: left;
 }
+
+.containerRadio{
+  margin-bottom: 15px; /* Espacio inferior entre los div */
+}
+
+.DateCotainer{
+  padding: 5px;
+  margin-bottom: 20px;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.Button{
+  padding: 5px 20px;
+}
+
+.Button2{
+  padding: 5px 20px;
+  margin-left: 10px;
+}
+
 
 
