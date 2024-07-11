@@ -22,7 +22,7 @@
   padding: 5px;
   margin-bottom: 10px;
   text-align: center;
-  width: 50%;
+  width: 65%;
 }
 
 .containerCon{
@@ -60,16 +60,18 @@
   background-color: white;
   color: black;
   font-size: 0.9em;
-  text-align: center; /* Cambiado a izquierda para alineación adecuada */
   margin-bottom: 15px;
+  display: flexbox;
 }
 
+
+
 .formGroup {
-  margin-bottom: 25px;
   display: flex;
-  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .formGroup label {
@@ -80,14 +82,21 @@
 }
 
 .formGroup input, .formGroup select {
-  width: 30%;
+  width: 20%;
   padding: 5px;
   margin-left: 15px;
+}
+
+.Checkfac{
+  margin-bottom: 15px;
+  text-align: left;
+  padding-left: 200px; 
 }
 
 .Check{
   margin-bottom: 15px;
   text-align: left;
+  padding-left: 10px; 
 }
 
 .containerRadio{

@@ -1,6 +1,7 @@
 import React from 'react';
 import "./globals.css";
 
+
 function Home() {
   return (
     
@@ -26,7 +27,7 @@ function Home() {
 
         <form className="formContainer" style={{ border: '1px solid black', padding: '10px' }}>
           <div className="formGroup">
-            <label htmlFor="TipoIdent">Tipo de Identificación: * </label>
+            <label>Tipo de Identificación: * </label>
             <select name="TipoIdent" id="TipoIdent">
               <option value="Cedula">Seleccionar uno</option>
               <option value="Cedula">Cedula</option>
@@ -116,7 +117,7 @@ function Home() {
             <input type="textarea" id="NivelEstudio" name="NivelEstudio" />
           </div>
 
-          <div className="Check">
+          <div className="Checkfac">
             <label htmlFor="NivelEstudio">¿Facturar a nombre de otra persona o institución?: </label>
             <input type="checkbox" id="check" name="check" />
           </div>
@@ -193,7 +194,7 @@ function Home() {
         </div>
 
         <div className="Check">
-          <button className="Button">Visualizar datos</button>
+          <button className="Button"> Visualizar datos</button>
           <button className="Button2">Limpiar</button>
         </div>
       
