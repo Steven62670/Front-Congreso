@@ -1,9 +1,10 @@
 # Front-Congreso
 Avances realizados.
-Poryecto realizado en Next.
-Creación del front de la pagina - diseño sencillo para poder trabajar.
 
-Validación de los campos marcados como obligatorios.
+Proyecto realizado en Next.
+* Creación del front de la pagina - diseño sencillo para poder trabajar.
+* Validación de los campos marcados como obligatorios.
+* Para verificar la validación dar clic en el boton de validar que se encuentra al final
 
 ## Desarrollo local
 
