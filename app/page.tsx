@@ -32,7 +32,7 @@ function Home() {
   return (   
     <div className='outer-container' onSubmit={handleSubmit(data => (console.log(data)) )}>
 
-      <div className="container" style={{ border: '1px solid black', padding: '10px' }} >
+      <div className="container" style={{ border: '1px solid gray', padding: '10px' }} >
         
         <div className="containerCon" style={{ border: '1px solid black', padding: '10px' }}>
           Congreso
@@ -42,7 +42,17 @@ function Home() {
           Congreso Internacional de Ciencia, Tecnología e Innovación para la Sociedad CITIS 2024
         </div>
 
-        <div className="textContainer" style={{ border: '1px solid black', padding: '10px' }}>
+        <div className="ValidContainer">
+          {errors.Identificación?.message && <p>{errors.Identificación.message}</p>}
+          {errors.nombres?.message && <p>{errors.nombres.message}</p>}
+          {errors.apellidos?.message && <p>{errors.apellidos.message}</p>}
+          {errors.CorreoPer?.message && <p>{errors.CorreoPer.message}</p>}
+          {errors.Dirección?.message && <p>{errors.Dirección.message}</p>}
+          {errors.celular?.message && <p>{errors.celular.message}</p>}
+          {errors.Ciudad?.message && <p>{errors.Ciudad.message}</p>}
+        </div>
+
+        <div className="textContainer" >
           GUAYAQUIL - MARIA AUXILIADORA <br/>
           Desde		mié, 17 jul 2024		Al		vie, 19 jul 2024<br/>
           Horario:	09:00 a 18:00<br/>
@@ -50,7 +60,7 @@ function Home() {
           Fecha de Finalización de Inscripción:	lun, 22 jul 2024<br/>
         </div>
 
-        <form className="formContainer" style={{ border: '1px solid black', padding: '10px' }}>
+        <form className="formContainer" style={{ border: '1px solid gray', padding: '10px' }}>
           
           <div className="formGroup">
             <label>Tipo de Identificación: * </label>
@@ -65,20 +75,17 @@ function Home() {
           <div className="formGroup">
             <label htmlFor="Identificación">Identificación: *</label>
             <input type="text" id="Identificación" {...register('Identificación')}/>
-            {errors.Identificación?.message && <p>{errors.Identificación.message}</p>}
           </div>
 
           <div className="formGroup">
             <label htmlFor="name">Nombres: *</label>
             <input type="text" id="name" {...register('nombres')} />
-            {errors.nombres?.message && <p>{errors.nombres.message}</p>}
           </div>
             
 
           <div className="formGroup">
             <label htmlFor="Apellido">Apellidos: *</label>
             <input type="text" id="Apellido" {...register('apellidos')} />
-            {errors.apellidos?.message && <p>{errors.apellidos.message}</p>}
           </div>
 
           <div className="formGroup">
@@ -90,7 +97,6 @@ function Home() {
           <div className="formGroup">
             <label htmlFor="CorreoPer">Correo personal: *</label>
             <input type="email" id="CorreoPer" {...register('CorreoPer')} />
-            {errors.CorreoPer?.message && <p>{errors.CorreoPer.message}</p>}
           </div>
 
           <div className="formGroup">
@@ -117,13 +123,11 @@ function Home() {
           <div className="formGroup">
             <label htmlFor="Dirección">Dirección: *</label>
             <input type="text" id="Dirección" {...register('Dirección')} />
-            {errors.Dirección?.message && <p>{errors.Dirección.message}</p>}
           </div>
 
           <div className="formGroup">
             <label htmlFor="Celular">Celular: *</label>
             <input type="text" id="Celular" {...register('celular')} />
-            {errors.celular?.message && <p>{errors.celular.message}</p>}
           </div>
 
           <div className="formGroup">
@@ -139,7 +143,6 @@ function Home() {
           <div className="formGroup">
             <label htmlFor="Ciudad">Ciudad: *</label>
             <input type="text" id="Ciudad" {...register('Ciudad')} />
-            {errors.Ciudad?.message && <p>{errors.Ciudad.message}</p>}
           </div>
 
           <div className="formGroup">
@@ -159,7 +162,7 @@ function Home() {
 
         </form>
 
-        <div className="containerRadio" style={{ border: '1px solid black', padding: '10px' }}>
+        <div className="containerRadio" style={{ border: '1px solid gray', padding: '10px' }}>
           <form className="formContainer">
 
             <div className="Check">
@@ -201,7 +204,7 @@ function Home() {
 
         </div>
 
-        <div className="textContainer" style={{ border: '1px solid black', padding: '10px' }}>
+        <div className="textContainer" style={{ border: '1px solid gray', padding: '10px' }}>
           <h3>* Protección de datos personales :</h3>
             <label htmlFor="texto">De conformidad con lo dispuesto en la Ley Orgánica de Protección de Datos 
               y su Reglamento General de Protección de datos, le informamos que sus datos personales serán tratados 
