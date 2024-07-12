@@ -1,13 +1,38 @@
+'use client';
 import React from 'react';
 import "./globals.css";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod"
+import { userSchema } from '@/Validaciones/UserSchema';
 
+type Inputs ={
+  nombres: string;
+  Identificación: string;
+  TipoIdent: string;
+  apellidos:string;
+  celular: string;
+  FechaNacimiento: string;
+  CorreoPer: string;
+  CorreoInst: string;
+  Dirección: string;
+  Ciudad: string;
+  
+}
 
 function Home() {
-  return (
-    
-    <div className='outer-container'>
+  const { register, handleSubmit, formState:{errors}} = useForm<Inputs>({
+    resolver: zodResolver(userSchema)
+  })
 
-      <div className="container" style={{ border: '1px solid black', padding: '10px' }}>
+  const onSubmit = (data: any) => {
+    console.log(data);
+    
+  };
+
+  return (   
+    <div className='outer-container' onSubmit={handleSubmit(data => (console.log(data)) )}>
+
+      <div className="container" style={{ border: '1px solid black', padding: '10px' }} >
         
         <div className="containerCon" style={{ border: '1px solid black', padding: '10px' }}>
           Congreso
@@ -26,10 +51,11 @@ function Home() {
         </div>
 
         <form className="formContainer" style={{ border: '1px solid black', padding: '10px' }}>
+          
           <div className="formGroup">
             <label>Tipo de Identificación: * </label>
-            <select name="TipoIdent" id="TipoIdent">
-              <option value="Cedula">Seleccionar uno</option>
+            <select id="TipoIdent" {...register('TipoIdent')} >
+              <option value="select">Seleccionar uno</option>
               <option value="Cedula">Cedula</option>
               <option value="Ruc">Ruc</option>
               <option value="Pasaporte">Pasaporte</option>
@@ -38,32 +64,38 @@ function Home() {
 
           <div className="formGroup">
             <label htmlFor="Identificación">Identificación: *</label>
-            <input type="text" id="Identificación" name="Identificación" />
+            <input type="text" id="Identificación" {...register('Identificación')}/>
+            {errors.Identificación?.message && <p>{errors.Identificación.message}</p>}
           </div>
 
           <div className="formGroup">
             <label htmlFor="name">Nombres: *</label>
-            <input type="text" id="name" name="name" />
+            <input type="text" id="name" {...register('nombres')} />
+            {errors.nombres?.message && <p>{errors.nombres.message}</p>}
           </div>
+            
 
           <div className="formGroup">
             <label htmlFor="Apellido">Apellidos: *</label>
-            <input type="text" id="Apellido" name="Apellido" />
+            <input type="text" id="Apellido" {...register('apellidos')} />
+            {errors.apellidos?.message && <p>{errors.apellidos.message}</p>}
           </div>
 
           <div className="formGroup">
             <label htmlFor="FechaNacimiento">Fecha de nacimiento: *</label>
-            <input type="date" id="FechaNacimiento" name="FechaNacimiento" />
+            <input type="date" id="FechaNacimiento" {...register('FechaNacimiento')}  />
+            {errors.FechaNacimiento?.message && <p>{errors.FechaNacimiento.message}</p>}
           </div>
 
           <div className="formGroup">
             <label htmlFor="CorreoPer">Correo personal: *</label>
-            <input type="email" id="CorreoPer" name="CorreoPer" />
+            <input type="email" id="CorreoPer" {...register('CorreoPer')} />
+            {errors.CorreoPer?.message && <p>{errors.CorreoPer.message}</p>}
           </div>
 
           <div className="formGroup">
             <label htmlFor="CorreoInst">Correo Institucional: </label>
-            <input type="email" id="CorreoInst" name="CorreoInst" />
+            <input type="email" id="CorreoInst" {...register('CorreoInst')} />
           </div>
 
           <div className="formGroup">
@@ -84,12 +116,14 @@ function Home() {
 
           <div className="formGroup">
             <label htmlFor="Dirección">Dirección: *</label>
-            <input type="text" id="Dirección" name="Dirección" />
+            <input type="text" id="Dirección" {...register('Dirección')} />
+            {errors.Dirección?.message && <p>{errors.Dirección.message}</p>}
           </div>
 
           <div className="formGroup">
             <label htmlFor="Celular">Celular: *</label>
-            <input type="text" id="Celular" name="Celular" />
+            <input type="text" id="Celular" {...register('celular')} />
+            {errors.celular?.message && <p>{errors.celular.message}</p>}
           </div>
 
           <div className="formGroup">
@@ -104,7 +138,8 @@ function Home() {
 
           <div className="formGroup">
             <label htmlFor="Ciudad">Ciudad: *</label>
-            <input type="text" id="Ciudad" name="Ciudad" />
+            <input type="text" id="Ciudad" {...register('Ciudad')} />
+            {errors.Ciudad?.message && <p>{errors.Ciudad.message}</p>}
           </div>
 
           <div className="formGroup">
@@ -193,8 +228,8 @@ function Home() {
 
         </div>
 
-        <div className="Check">
-          <button className="Button"> Visualizar datos</button>
+        <div className="Check" onSubmit={handleSubmit(data => (console.log(data)) )}>
+          <button onClick={handleSubmit(onSubmit)} className='Button'>Enviar</button>
           <button className="Button2">Limpiar</button>
         </div>
       
